@@ -1,5 +1,3 @@
-// started html + css @ 12:30 pm - 3:00pm = 2.5hr
-// started js @ 4pm - 7pm 
 const reset = document.getElementById('reset')
 
 // gets the amount of the bill from input field
@@ -31,7 +29,6 @@ const addSelectedClass = (element) => {
 const custom = document.getElementById('custom-tip')
 const getCustomValue = () => {
     const customValueAsNumber = parseInt(custom.value)
-    console.log(customValueAsNumber)
     return tipPrecent = customValueAsNumber
 }
 custom.addEventListener('change', getCustomValue)
