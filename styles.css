@@ -1,0 +1,250 @@
+/* Universal styles  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+:root {
+    font-size: 16px;
+    --main-color: #c5e4e7;
+    --second-color:  #fff;
+    --third-color: #00474b;
+    --forth-color: #7F9D9F;
+    --font-color: #547878;
+    --highlight-color: #26C2AE;
+    --second-font-color: #5E7A7D;
+    --header-color:#3D6666;
+    --input-color: #f3f9fa;
+    --font-family:  'Space Mono', monospace;
+    --hover:#9fe8df;
+}
+
+img {
+   max-width: 100%;
+}
+
+/* Typography  */
+h1{
+    color: var(--header-color);
+    width: 5.375rem;
+    margin-top: 3.125rem;
+    margin-bottom: 2.5rem;
+    letter-spacing: 8px;
+}
+
+h2 {
+    font-size: 1rem;
+    color: var(--second-font-color);
+    margin-top: 2rem;
+}
+
+h3 {
+    font-size: 1rem;
+    color: var(--second-color);
+}
+
+h3 span {
+    display: block;
+    font-size: 0.8125rem;
+    color: var(--forth-color);
+}
+input {
+    font-size: 1.5rem;
+}
+
+/* main content  */
+body {
+    background: var(--main-color);
+    font-family: var(--font-family);
+    height: 100vh;
+    width: 100vw;
+}
+
+body,
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    background: var(--second-color);
+    padding: 2rem;
+    border-radius: 1.5625rem 1.5625rem 0 0;
+}
+
+input {
+    border: none;
+    width: 19.4375rem;
+    height: 3rem;
+    padding-left: 2.5rem;
+    color: var(--third-color);
+    font-family: var(--font-family);
+    border-radius: 0.3125rem;
+    outline-color: var(--forth-color);
+}
+
+/* input:active,
+input:hover {
+    border: 2px solid var(--forth-color);
+    
+} */
+
+#bill {
+    background: url(./images/icon-dollar.svg) var(--input-color) no-repeat scroll 1.20375rem;
+}
+
+#num-of-people {
+    background: url(./images/icon-person.svg) var(--input-color) no-repeat scroll 1.20375rem;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+label {
+    display: block;
+    color: var(--second-font-color);
+    font-size: 1rem;
+    margin-bottom: 0.375rem;
+}
+
+.tip-amounts-container {
+    width: 19.4375rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.tip-btn {
+    background: var(--third-color);
+    width: 9.125rem;
+    height: 3rem;
+    border: none;
+    color: var(--second-color);
+    font-size: 1.5rem;
+    font-family: var(--font-family);
+    line-height: 2.1875rem;
+    border-radius: 0.3125rem;
+}
+
+.custom {
+    background: var(--input-color);
+    color: var(--font-color);
+}
+
+.output {
+    background: var(--third-color);
+    width: 20.4375rem;
+    height: 16.0625rem;
+    border-radius: 1rem;
+    padding: 2.4375rem 1.5rem;
+    margin-top: 2rem;
+}
+
+.tip-amount,
+.total {
+    display: flex;
+    justify-content: space-between;
+}
+.output p {
+    color: var(--highlight-color);
+    font-size: 2rem;
+}
+
+.output button {
+    width: 17.5625rem;
+    height: 3rem;
+    background: var(--highlight-color);
+    color: var(--third-color);
+    font-family: var(--font-family);
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 0.3125rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+}
+
+/* hover states */
+
+button:hover,
+button:active {
+    background: var(--hover);
+    color: var(--third-color);
+    cursor: pointer;
+}
+
+input:hover,
+input:active {
+    border: 2px solid var(--highlight-color);
+    cursor: pointer;
+}
+
+/* selected state */
+
+.selected {
+    background-color: var(--highlight-color);
+}
+/* Media queries */
+@media (min-width: 920px) {
+
+    main {
+        width: 57.5rem;
+        height: 30.0625rem;
+        flex-direction: row;
+        padding: 0;
+        border-radius: 1.5625rem;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .input {
+        width: 23.6875rem;
+        height: 24.25rem;
+        margin: 2.8125rem 3rem 3rem 3rem;
+    }
+
+    .tip-amounts-container {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 14px;
+    }
+
+    .tip-btn {
+        width: 7.3125rem;
+    }
+    .output {
+        width:25.8125rem;
+        height: 26.0625rem;
+        margin: auto;
+    }
+
+    .output p {
+        font-size: 3rem;
+    }
+
+    .tip-amount,
+    .total {
+        align-items: center;
+    }
+
+    .output button {
+        width: 20.8125rem;
+        margin-top: 8.1325rem;
+        margin-left: 1rem;
+    }
+}
