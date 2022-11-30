@@ -27,6 +27,15 @@ const addSelectedClass = (element) => {
         element.classList.add('selected')
 }
 
+// get the custom value for tip
+const custom = document.getElementById('custom-tip')
+const getCustomValue = () => {
+    const customValueAsNumber = parseInt(custom.value)
+    console.log(customValueAsNumber)
+    return tipPrecent = customValueAsNumber
+}
+custom.addEventListener('change', getCustomValue)
+
 // sets the tip precent
 let tipPrecent = 0
 const tipPercentAmount = document.querySelectorAll('.tip-btn')
@@ -34,6 +43,7 @@ const tipPercentAmount = document.querySelectorAll('.tip-btn')
 tipPercentAmount.forEach(btn => {
     btn.addEventListener('click', () => {
         addSelectedClass(btn)
+        
         if(btn.classList.contains('_5')) {
             tipPrecent = 5
         } else if (btn.classList.contains('_10')) {
@@ -44,7 +54,7 @@ tipPercentAmount.forEach(btn => {
             tipPrecent = 25
         } else if (btn.classList.contains('_50')) {
             tipPrecent = 50
-        }
+        } 
         calcTip(getBillAmount(), tipPrecent)
     })
 })

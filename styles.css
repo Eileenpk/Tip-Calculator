@@ -143,6 +143,7 @@ label {
 .custom {
     background: var(--input-color);
     color: var(--font-color);
+    padding-left: 1.5rem;
 }
 
 .output {
