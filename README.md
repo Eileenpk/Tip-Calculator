@@ -23,7 +23,7 @@ Users should be able to:
 ### Screenshot
 
 ![screen shot of full screen webpage](https://github.com/Eileenpk/Tip-Calculator/blob/main/images/website.png)
-![screen shot of mobile webpage](https://github.com/Eileenpk/order-summary-component/blob/main/images/mobile.png)
+![screen shot of mobile webpage](https://github.com/Eileenpk/Tip-Calculator/blob/main/images/mobile.png)
 ### Links
 
 - Solution URL: [GitHub](https://github.com/Eileenpk/Tip-Calculator)
