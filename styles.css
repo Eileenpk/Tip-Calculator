@@ -215,17 +215,12 @@ input:active {
 }
 /* Media queries */
 @media (min-width: 57.5rem) {
-    h1 {
-        margin-bottom: 3.125rem;
-        margin-top: 0;
-    }
     main {
         width: 57.5rem;
         height: 30.0625rem;
         flex-direction: row;
         padding: 0;
         border-radius: 1.5625rem;
-        margin: 0;
     }
 
     input {
