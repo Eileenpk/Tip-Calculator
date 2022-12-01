@@ -12,7 +12,18 @@ const getBillAmount = () => {
 const people = document.getElementById('num-of-people')
 const numPeople = () => {
     const numberOfPeople = people.value
-    return numberOfPeople
+    const err = document.querySelector('.err-container')
+    if (!people.value) {
+        people.classList.add('err')
+        err.innerHTML = `
+            <p class='err-message'>Can't be zero</p>
+        `
+    }else if (people.value) {
+        people.classList.remove('err')
+        err.innerHTML = " "
+        return numberOfPeople
+    }
+    
 }
 
 // adds a selected class to change color of selected tip btn background for better useablity 
